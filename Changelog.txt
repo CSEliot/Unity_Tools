@@ -1,0 +1,6 @@
+NOTICE: PLEASE KEEP THIS CHANGELOG CLEAN. CONSIDER THIS A README.
+Organize in more recent as higher.
+
+
+v0.01 - 05/21/2017 - First Commit. CBUG is a replacement for Debug.Log that allows for seeing debug logs on-screen post-editor. Tools is a script for simple and common functions. Please 
+feel free to update it, but make your own fork first. Anything I find myself using more than once will likely be added to this, but anything added to this MUST be cleaned up and commented.
