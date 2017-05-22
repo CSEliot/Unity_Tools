@@ -63,7 +63,8 @@ public class Tools : MonoBehaviour {
     /// <param name="Call">Animation object</param>
     /// <param name="Time">How long to delay by. To delay by 1 frame, Time == 0.</param>
     /// <returns></returns>
-    public static void DelayAnim(Animator anim, float time, string clipName,
+    public static void DelayAnim(Animator anim, float time, 
+        string clipName = "",
         string trigger = "",
         float floatParam = -1f,
         int intParam = -1,
@@ -81,7 +82,8 @@ public class Tools : MonoBehaviour {
 
 
     #region Private Core Functionality 
-    private IEnumerator __delayAnim(Animator anim, float time, string clipName = "",
+    private IEnumerator __delayAnim(Animator anim, float time, 
+        string clipName = "",
         string trigger = "",
         float floatParam = -1f,
         int intParam = -1,
@@ -121,7 +123,8 @@ public class Tools : MonoBehaviour {
     #endregion
 
     #region Helper Functions
-    private void _delayAnim(Animator anim, float time, string clipName,
+    private void _delayAnim(Animator anim, float time, 
+        string clipName = "",
         string trigger = "",
         float floatParam = -1f,
         int intParam = -1,
