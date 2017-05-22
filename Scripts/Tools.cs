@@ -81,7 +81,7 @@ public class Tools : MonoBehaviour {
 
 
     #region Private Core Functionality 
-    private IEnumerator __delayAnim(Animator anim, float time, string clipName,
+    private IEnumerator __delayAnim(Animator anim, float time, string clipName = "",
         string trigger = "",
         float floatParam = -1f,
         int intParam = -1,
@@ -93,6 +93,9 @@ public class Tools : MonoBehaviour {
         else
             yield return new WaitForSeconds(time);
 
+        if (clipName != "" && trigger == "")
+            CBUG.SrsError("clipName Required!");
+
         if (hasBoolParam)
             anim.SetBool(clipName, boolParam);
         else if (trigger != "")
@@ -101,7 +104,6 @@ public class Tools : MonoBehaviour {
             anim.SetFloat(clipName, floatParam);
         else if (intParam != -1)
             anim.SetFloat(clipName, intParam);
-
     }
     private IEnumerator __DelayFunction(VanillaFunction call, float time)
     {
