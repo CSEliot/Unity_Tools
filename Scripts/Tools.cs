@@ -1,9 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 /// <summary>
 /// A set of easily callable functions built to be used through a singleton in Unity.
+/// Current Functionalities:
+///  - Delay an animation
+///  - Delay a function
+///  - Fade a Text object.
+/// 
 /// Contributors:
 ///  - Eliot Leo Carney-Seim
 ///  
@@ -142,6 +148,11 @@ public class Tools : MonoBehaviour {
     {
         StartCoroutine(__DelayFunction(call, time));
     }
+    private void _fadeText(Text textToFade, float from, float to, float speed)
+    {
+
+    }
+
     private void ensureSingleton()
     {
         //Give all clones a chance to instantiate themselves.
